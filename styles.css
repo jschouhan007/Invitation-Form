@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4e1;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Page Container */
+.page {
+    position: relative;
+    padding: 20px;
+}
+
+/* Background Doodles Animation */
+.page::before {
+    content: "🎨 🌈 🎀 🎁 🎵 🌟 💖 🎷 🎮";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+    transform: rotate(-30deg);
+    z-index: -1;
+    line-height: 1.5;
+    white-space: nowrap;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: rotate(-30deg) translateX(0);
+    }
+    100% {
+        transform: rotate(-30deg) translateX(-200px);
+    }
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+/* Title Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Main Content */
+.content {
+    margin: 20px auto;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #d2691e;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+.event-details p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+/* Slide In Animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #5100ff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pop 2s ease-in-out infinite alternate;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    background-color: #ff6347;
+}
+
+/* Button Pop Animation */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #008080;
+    animation: pulse 2s infinite;
+}
+
+/* Footer Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* RSVP Form */
+.rsvp-form {
+    background-color: #ffdab9;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: left;
+    animation: zoomIn 1.5s ease-out;
+}
+
+.rsvp-form label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+}
+
+.rsvp-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.rsvp-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5eff00;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: shake 1.5s ease infinite alternate;
+}
+
+.rsvp-form button:hover {
+    background-color: #ff6347;
+}
+
+/* Form Zoom Animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Button Shake Animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}

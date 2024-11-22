@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP Now</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="title">📝 RSVP to Join the Fun! 🎉</h1>
+        </header>
+        <main class="content">
+            <form class="rsvp-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="5" required>
+                
+                <button type="submit" class="button">Submit RSVP</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <p>🎊 We can't wait to celebrate with you! 🎈</p>
+        </footer>
+    </div>
+</body>
+</html>
